@@ -26,6 +26,7 @@ const Tabless = () => {
           <TableCell className="font-medium">
             <div className="flex items-center gap-x-2">
               <Image
+                alt="avatar"
                 src={"/noavatar.png"}
                 width={30}
                 height={30}
@@ -42,6 +43,7 @@ const Tabless = () => {
           <TableCell className="font-medium">
             <div className="flex items-center gap-x-2">
               <Image
+                alt="avatar"
                 src={"/noavatar.png"}
                 width={30}
                 height={30}
@@ -58,6 +60,7 @@ const Tabless = () => {
           <TableCell className="font-medium">
             <div className="flex items-center gap-x-2">
               <Image
+                alt="avatar"
                 src={"/noavatar.png"}
                 width={30}
                 height={30}

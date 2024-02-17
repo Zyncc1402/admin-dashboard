@@ -51,15 +51,18 @@ const Tables = async () => {
                 <TableCell className="font-medium">
                   <div className="flex items-center gap-x-2">
                     <Image
+                      alt="avatar"
                       src={product.img || "/noavatar.png"}
                       width={30}
                       height={30}
                       className="avatar rounded-full"
                     />
-                    {product.title}
+                    {product.title.slice(0, 30).concat("...")}
                   </div>
                 </TableCell>
-                <TableCell>{product.description}</TableCell>
+                <TableCell>
+                  {product.description.slice(0, 40).concat("...")}
+                </TableCell>
                 <TableCell>
                   {product.createdAt.toString().substr(4, 12)}
                 </TableCell>

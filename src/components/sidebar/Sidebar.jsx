@@ -20,7 +20,7 @@ const Sidebar = () => {
       <div className="userInfo flex gap-3 items-center">
         <Image
           src={"/noavatar.png"}
-          alt=""
+          alt="avatar"
           width="50"
           height="50"
           className="rounded-full"

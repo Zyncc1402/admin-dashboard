@@ -8,9 +8,10 @@ import { Button } from "@/components/ui/button";
 import { updateUser } from "@/actions/action";
 import { getUser } from "@/utils/data";
 
-const Products = async () => {
-  const params = "65d09a8ea06febce2673d20b";
-  const user = await getUser(params)
+const Products = async ({params}) => {
+  const id = params.id;
+  console.log(id)
+  const user = await getUser(id)
   return (
     <div className="flex">
       <Sidebar />
@@ -19,12 +20,11 @@ const Products = async () => {
         <div className="mt-6 navbar flex justify-center rounded-md p-20">
           <div className="leftCol flex h-[500px] w-[500px]">
             <Image
-              loading="lazy"
               alt="User Picture"
               src={user.img || "/noavatar.png"}
               width={500}
               height={500}
-              quality={100}
+              quality={70}
               style={{ objectFit: "cover" }}
               className="rounded-full"
             />

@@ -18,7 +18,6 @@ const AddProduct = () => {
               action={addProduct}
               className="flex flex-col gap-y-4 w-[600px]"
             >
-              <input type="hidden" name="id" />
               <Label htmlFor="title">Title</Label>
               <Input
                 type="text"

@@ -51,7 +51,6 @@ const Tables = async () => {
                 <TableCell className="font-medium">
                   <div className="flex items-center gap-x-2 font-bold capitalize">
                     <Image
-                      loading="lazy"
                       alt="User Picture"
                       src={user.img || "/noavatar.png"}
                       width={30}

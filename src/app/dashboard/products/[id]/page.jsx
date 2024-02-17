@@ -6,11 +6,11 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { getProduct } from "@/utils/data";
-import { addProduct, updateProduct } from "@/actions/action";
+import { updateProduct } from "@/actions/action";
 
-const Products = async () => {
-  const params = "65d08828a06febce2673d0b8";
-  const product = await getProduct(params);
+const Products = async ({params}) => {
+  const id = params.id;
+  const product = await getProduct(id);
   return (
     <div className="flex">
       <Sidebar />
@@ -19,12 +19,11 @@ const Products = async () => {
         <div className="mt-6 navbar flex justify-center rounded-md p-20">
           <div className="leftCol flex h-[500px] w-[500px]">
             <Image
-              loading="lazy"
               alt="User Picture"
               src={product.img || "/noavatar.png"}
               width={500}
               height={500}
-              quality={100}
+              quality={70}
               style={{ objectFit: "cover" }}
               className="rounded-sm"
             />
