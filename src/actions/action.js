@@ -64,8 +64,13 @@ export const addUser = async (formData) => {
     img,
     isAdmin,
   });
-  const project = await user.save();
-  console.log(project);
+  try {
+    const project = await user.save();
+    res.status(200).json({ success: true, data: project });
+  } catch (error) {
+    console.log(error);
+    res.status(400).json({ success: false });
+  }
   revalidatePath("/dashboard/users");
   redirect("/dashboard/users");
 };
