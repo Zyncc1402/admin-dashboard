@@ -50,6 +50,7 @@ const AddUser = () => {
               <Label htmlFor="phone">Image</Label>
               <Input
                 type="text"
+                alt="profilePic"
                 placeholder="Image"
                 name="img"
                 className="text-black"

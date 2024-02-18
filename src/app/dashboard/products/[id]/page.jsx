@@ -49,6 +49,7 @@ const Products = async ({params}) => {
                 name="description"
                 className="text-black"
                 defaultValue={product.description}
+                required
               />
               <Label htmlFor="price">Price</Label>
               <Input

@@ -13,22 +13,14 @@ import {
   MdHelpCenter,
   MdLogout,
 } from "react-icons/md";
+import UserCard from "../userCard/UserCard";
+import SigninButton from "../signinButton/signinButton";
 
 const Sidebar = () => {
   return (
-    <div className="p-3 pt-6 sidebar h-screen">
+    <div className="p-3 pt-6 sidebar h-screen relative">
       <div className="userInfo flex gap-3 items-center">
-        <Image
-          src={"/noavatar.png"}
-          alt="avatar"
-          width="50"
-          height="50"
-          className="rounded-full"
-        />
-        <div className="info">
-          <h2 className="font-bold">John Doe</h2>
-          <p className="font-light role">Administrator</p>
-        </div>
+        <UserCard/>
       </div>
       <div className="menu">
         <div className="category mt-[30px]">
@@ -80,6 +72,9 @@ const Sidebar = () => {
           <div className="flex mt-4 gap-4 menuLink p-2 rounded-md items-center">
             <MdHelpCenter size={22} />
             <Link href={"/dashboard"}>Help</Link>
+          </div>
+          <div className="absolute bottom-0 left-0 m-5">
+              <SigninButton/>
           </div>
         </div>
       </div>

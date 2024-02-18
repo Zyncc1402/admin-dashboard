@@ -7,13 +7,13 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
 export const updateUser = async (formData) => {
-  const { id, name, email, phone, isAdmin, img } = Object.fromEntries(formData);
+  const { id, name, email, phone, admin, img } = Object.fromEntries(formData);
   await User.findByIdAndUpdate(id, {
     name,
     email,
     phone,
     img,
-    isAdmin,
+    isAdmin: admin,
   });
   revalidatePath("/dashboard/users");
   redirect("/dashboard/users");
@@ -49,6 +49,17 @@ export const addUser = async (formData) => {
   await user.save();
   revalidatePath("/dashboard/users");
   redirect("/dashboard/users");
+};
+
+export const createUser = async (name, email, image) => {
+  const user = new User({
+    name,
+    email,
+    img: image,
+    isAdmin: false,
+  });
+  await user.save();
+  revalidatePath("/dashboard/users");
 };
 
 export const addProduct = async (formData) => {

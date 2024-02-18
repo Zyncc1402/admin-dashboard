@@ -3,7 +3,6 @@ import Chart from "@/components/chart/chart";
 import Navbar from "@/components/navbar/Navbar";
 import Sidebar from "@/components/sidebar/Sidebar";
 import Tabless from "@/components/table/table";
-import { Table } from "@/components/ui/table";
 import React from "react";
 
 const Dashboard = () => {
