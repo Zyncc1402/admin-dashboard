@@ -33,6 +33,24 @@ export const updateProduct = async (formData) => {
   redirect("/dashboard/products");
 };
 
+// export const addUser = async (formData) => {
+//   let { name, email, password, phone, isAdmin, img } =
+//     Object.fromEntries(formData);
+//   const saltRounds = 10;
+//   const hashedPassword = await bcrypt.hash(password, saltRounds);
+//   const user = new User({
+//     name,
+//     email,
+//     password: hashedPassword,
+//     phone,
+//     img,
+//     isAdmin,
+//   });
+//   await user.save();
+//   revalidatePath("/dashboard/users");
+//   redirect("/dashboard/users");
+// };
+
 export const addUser = async (formData) => {
   let { name, email, password, phone, isAdmin, img } =
     Object.fromEntries(formData);
@@ -46,7 +64,8 @@ export const addUser = async (formData) => {
     img,
     isAdmin,
   });
-  await user.save();
+  const project = await user.save();
+  console.log(project);
   revalidatePath("/dashboard/users");
   redirect("/dashboard/users");
 };
