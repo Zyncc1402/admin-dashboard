@@ -10,7 +10,6 @@ import { getUser } from "@/utils/data";
 
 const Products = async ({params}) => {
   const id = params.id;
-  console.log(id)
   const user = await getUser(id)
   return (
     <div className="flex">
@@ -75,8 +74,8 @@ const Products = async ({params}) => {
                 className="text-black rounded-md p-2"
                 defaultValue={user.isAdmin}
               >
-                <option value={true}>Yes</option>
-                <option value={false}>No</option>
+                <option value={"true"}>Yes</option>
+                <option value={"false"}>No</option>
               </select>
               <Button type="submit">Update</Button>
             </form>

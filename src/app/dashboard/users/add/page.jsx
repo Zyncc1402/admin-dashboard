@@ -61,10 +61,10 @@ const AddUser = () => {
                 placeholder="isAdmin?"
                 name="isAdmin"
                 className="text-black rounded-md p-2"
-                defaultValue={false}
+                defaultValue={"false"}
               >
-                <option value={true}>Yes</option>
-                <option value={false}>No</option>
+                <option value={"true"}>Yes</option>
+                <option value={"false"}>No</option>
               </select>
               <Button type="submit">Add User</Button>
             </form>

@@ -68,7 +68,13 @@ const Tables = async () => {
                 <TableCell>{user.phone || "N/A"}</TableCell>
                 <TableCell>{user.createdAt.toString().substr(4, 12)}</TableCell>
                 <TableCell className="font-bold">
-                  {user.isAdmin ? "Administrator" : "Client"}
+                  {(() => {
+                    if (user.isAdmin === "true") {
+                      return "Administrator";
+                    }else {
+                      return "Client";
+                    }
+                  })()}
                 </TableCell>
                 <TableCell className="w-[220px]">
                   <div className="flex gap-x-2">
