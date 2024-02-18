@@ -1,8 +1,8 @@
-import LoaderSVG from "@/components/Loaders/loader";
 import Navbar from "@/components/navbar/Navbar";
 import Sidebar from "@/components/sidebar/Sidebar";
 import Tables from "@/components/table/user table";
-import React, { Suspense } from "react";
+
+export const dynamic = 'force-dynamic'
 
 const Users = () => {
   return (
@@ -11,9 +11,7 @@ const Users = () => {
       <div className="dashboard p-4">
         <Navbar />
         <div className="userTable p-4 rounded-md mt-6">
-          <Suspense fallback={<LoaderSVG/>}>
-            <Tables />
-          </Suspense>
+          <Tables />
         </div>
       </div>
     </div>

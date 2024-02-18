@@ -1,13 +1,14 @@
 import mongoose from "mongoose";
 
+const connection = {};
+
 export const connectToDB = async () => {
-    try {
-        await mongoose.connect(
-          "mongodb+srv://Chandan:Chandan1402@cluster0.gmwqwi1.mongodb.net/dashboard?retryWrites=true&w=majority"
-        );
-        console.log('Connected to DB')
-    } catch (error) {
-        console.log(error)
-        throw new Error("Failed to connect to DB")
-    }
-}
+  try {
+    if (connection.isConnected) return;
+    const db = await mongoose.connect(process.env.MONGO);
+    connection.isConnected = db.connections[0].readyState;
+  } catch (error) {
+    console.log(error);
+    throw new Error(error);
+  }
+};
