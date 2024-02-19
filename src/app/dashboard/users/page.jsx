@@ -2,7 +2,7 @@ import Navbar from "@/components/navbar/Navbar";
 import Sidebar from "@/components/sidebar/Sidebar";
 import Tables from "@/components/table/user table";
 
-export const dynamic = 'force-dynamic'
+export const revalidate = 300;
 
 const Users = () => {
   return (

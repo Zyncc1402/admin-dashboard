@@ -23,7 +23,7 @@ const Products = async ({params}) => {
               src={product.img || "/noavatar.png"}
               width={500}
               height={500}
-              quality={70}
+              quality={100}
               style={{ objectFit: "cover" }}
               className="rounded-sm"
             />

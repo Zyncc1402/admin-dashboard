@@ -39,6 +39,7 @@ const Tables = async () => {
             <TableHead className="w-[110px] thead">Title</TableHead>
             <TableHead className="w-[20px] thead">Description</TableHead>
             <TableHead className="thead w-[100px]">Created at</TableHead>
+            <TableHead className="thead w-[100px]">Updated at</TableHead>
             <TableHead className="thead w-[100px]">Price</TableHead>
             <TableHead className="thead w-[100px]">Stock</TableHead>
             <TableHead className="thead w-[100px]">Action</TableHead>
@@ -65,6 +66,9 @@ const Tables = async () => {
                 </TableCell>
                 <TableCell>
                   {product.createdAt.toString().substr(4, 12)}
+                </TableCell>
+                <TableCell>
+                  {product.updatedAt.toString().substr(4, 17)}
                 </TableCell>
                 <TableCell className="font-bold">₹ {product.price}</TableCell>
                 <TableCell className="font-bold">{product.stock}</TableCell>
