@@ -14,7 +14,7 @@ import Link from "next/link";
 import { getUsers } from "@/utils/data";
 import { deleteUser } from "@/actions/action";
 
-export const revalidate = 300;
+export const revalidate = 60;
 
 const Tables = async () => {
   const users = await getUsers();

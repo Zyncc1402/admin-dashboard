@@ -2,7 +2,7 @@ import Navbar from "@/components/navbar/Navbar";
 import Sidebar from "@/components/sidebar/Sidebar";
 import Tables from "@/components/table/user table";
 
-export const revalidate = 300;
+export const revalidate = 60;
 
 const Users = () => {
   return (

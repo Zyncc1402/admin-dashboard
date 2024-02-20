@@ -27,7 +27,9 @@ const Tabless = () => {
             <div className="flex items-center gap-x-2">
               <Image
                 alt="avatar"
-                src={"/noavatar.png"}
+                src={
+                  "https://images.pexels.com/photos/15019490/pexels-photo-15019490/free-photo-of-portrait-of-a-smiling-man.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                }
                 width={30}
                 height={30}
                 className="avatar rounded-full"
@@ -37,41 +39,45 @@ const Tabless = () => {
           </TableCell>
           <TableCell>Paid</TableCell>
           <TableCell>16/02/24</TableCell>
-          <TableCell className="text-right">$250.00</TableCell>
+          <TableCell className="text-right">$160.00</TableCell>
         </TableRow>
         <TableRow>
           <TableCell className="font-medium">
             <div className="flex items-center gap-x-2">
               <Image
                 alt="avatar"
-                src={"/noavatar.png"}
+                src={
+                  "https://images.pexels.com/photos/18978812/pexels-photo-18978812/free-photo-of-young-redhead-in-a-leather-jacket-and-sunglasses-sitting-on-a-bench.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                }
                 width={30}
                 height={30}
                 className="avatar rounded-full"
               />
-              John Doe
+              Emily Clerk
             </div>
           </TableCell>
           <TableCell>Paid</TableCell>
           <TableCell>16/02/24</TableCell>
-          <TableCell className="text-right">$250.00</TableCell>
+          <TableCell className="text-right">$340.00</TableCell>
         </TableRow>
         <TableRow>
           <TableCell className="font-medium">
             <div className="flex items-center gap-x-2">
               <Image
                 alt="avatar"
-                src={"/noavatar.png"}
+                src={
+                  "https://images.pexels.com/photos/7752820/pexels-photo-7752820.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                }
                 width={30}
                 height={30}
                 className="avatar rounded-full"
               />
-              John Doe
+              Rishab Khattar
             </div>
           </TableCell>
-          <TableCell>Paid</TableCell>
+          <TableCell>Pending</TableCell>
           <TableCell>16/02/24</TableCell>
-          <TableCell className="text-right">$250.00</TableCell>
+          <TableCell className="text-right">$10.00</TableCell>
         </TableRow>
       </TableBody>
     </Table>
