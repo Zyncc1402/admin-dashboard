@@ -3,7 +3,7 @@ import Sidebar from "@/components/sidebar/Sidebar";
 import Tables from "@/components/table/product table";
 import React from "react";
 
-export const revalidate = 60;
+export const dynamic = "force-dynamic";
 
 const Products = () => {
   return (

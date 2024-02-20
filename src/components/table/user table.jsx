@@ -14,7 +14,7 @@ import Link from "next/link";
 import { getUsers } from "@/utils/data";
 import { deleteUser } from "@/actions/action";
 
-export const revalidate = 60;
+export const dynamic = "force-dynamic";
 
 const Tables = async () => {
   const users = await getUsers();

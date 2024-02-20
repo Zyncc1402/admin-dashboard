@@ -5,6 +5,8 @@ import Sidebar from "@/components/sidebar/Sidebar";
 import Tabless from "@/components/table/table";
 import React from "react";
 
+export const dynamic = 'force-dynamic';
+
 const Dashboard = () => {
   return (
     <div className="flex">
