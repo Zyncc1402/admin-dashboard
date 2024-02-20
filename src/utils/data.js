@@ -9,7 +9,6 @@ export const getUsers = async () => {
     return res;
   } catch (error) {
     console.log(error);
-    throw new Error("Failed to fetch Users");
   }
 };
 

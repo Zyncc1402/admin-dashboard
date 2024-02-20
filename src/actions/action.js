@@ -56,7 +56,7 @@ export const createUser = async (name, email, image) => {
     name,
     email,
     img: image,
-    isAdmin: false,
+    isAdmin: "false",
   });
   await user.save();
   revalidatePath("/dashboard/users");
